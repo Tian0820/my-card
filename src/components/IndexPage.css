@@ -20,22 +20,21 @@ button {
  * grid
  */
 .body-wrapper {
-  min-height: 1100px;
+  height: 100vh; }
+
+.container {
+  min-height: 80vh;
   background-repeat: repeat;
   background-position: center center;
   background-size: cover;
   background-size: 80%;
   animation: snowing 15s linear infinite; }
 
-@media screen and (max-width: 700px) {
-  .body-wrapper {
-    min-height: 800px; } }
 .header-wrapper {
   display: inline-block;
   width: 100%; }
 
 .greeting-wrapper {
-  margin-top: 50px;
   text-align: center; }
   .greeting-wrapper .ribbon-wrapper {
     width: 100%;

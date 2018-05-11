@@ -3,7 +3,11 @@
 @import "../assets/scss/mixin";
 
 .body-wrapper {
-  min-height: 1100px;
+  height: 100vh;
+}
+
+.container {
+  min-height: 80vh;
   background: {
     repeat: repeat;
     position: center center;
@@ -13,21 +17,12 @@
   animation: snowing 15s linear infinite;
 }
 
-@media screen and (max-width: 700px) {
-  .body-wrapper {
-    min-height: 800px;
-  }
-}
-
 .header-wrapper {
   display: inline-block;
   width: 100%;
-  //min-width: 376px;
-
 }
 
 .greeting-wrapper {
-  margin-top: 50px;
   text-align: center;
 
     .ribbon-wrapper {

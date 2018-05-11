@@ -25,8 +25,7 @@ button {
   background-repeat: repeat-x;
   background-position: center center;
   background-size: cover;
-  background-size: 20%;
-  animation: shake 1s linear infinite; }
+  background-size: 20%; }
 
 @keyframes shake {
   0%, 100% {
