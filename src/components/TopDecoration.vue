@@ -1,17 +1,21 @@
 <template>
 
-  <img class="top-decoration1" src="../assets/img/gift1.png"/>
+    <!--<div class="decoration-wrapper">-->
+    <img class="decoration-wrapper" :src="url" draggable="false"/>
+    <!--<span>{{ url }}</span>-->
+    <!--</div>-->
 
 </template>
 
-<script>
-  import Component from 'vue-class-component'
-  import Vue from 'vue';
+<script lang="ts">
+    import {Component, Prop, Vue, Provide} from 'vue-property-decorator';
 
-  export default class TopDecoration extends Vue {
+    @Component
+    export default class TopDecoration extends Vue {
+        @Prop() private name: string;
+        @Provide() url = require('../assets/img/' + this.name)
 
-
-  }
+    }
 
 </script>
 

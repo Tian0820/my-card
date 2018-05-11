@@ -1,0 +1,36 @@
+html, body, h1, h2, h3, h4, h5, h6, hr, li, ul, p, a, img, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  list-style: none; }
+
+html {
+  height: 100%; }
+
+* {
+  position: relative;
+  box-sizing: border-box; }
+
+button {
+  outline: none; }
+
+/*
+ * grid
+ */
+.decoration-wrapper {
+  display: inline-block;
+  width: 9%;
+  vertical-align: top;
+  animation: down-up 3s ease-in-out infinite; }
+
+@keyframes down-up {
+  0% {
+    top: 0; }
+  50% {
+    top: -1em; }
+  100% {
+    top: 0; } }
+
+/*# sourceMappingURL=TopDecoration.css.map */
