@@ -4,10 +4,6 @@
 
 .body-wrapper {
   height: 100vh;
-}
-
-.container {
-  min-height: 80vh;
   background: {
     repeat: repeat;
     position: center center;
@@ -15,6 +11,10 @@
   }
   background-size: 80%;
   animation: snowing 15s linear infinite;
+}
+
+.container {
+  min-height: 80vh;
 }
 
 .header-wrapper {

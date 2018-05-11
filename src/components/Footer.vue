@@ -1,6 +1,14 @@
 <template>
 
-    <div class="footer-wrapper" :style="{ backgroundImage: 'url(' + bgUrl + ')' }">
+    <div class="footer-wrapper">
+        <div class="left-wrapper">
+            <img src="../assets/img/gifts1.png"/>
+        </div>
+        <div class="right-wrapper">
+            <img src="../assets/img/gifts2.png"/>
+        </div>
+        <!--<div class="clear-fix"></div>-->
+
     </div>
 
 </template>
@@ -10,7 +18,6 @@
 
     @Component
     export default class Footer extends Vue {
-        @Provide() bgUrl = require('../assets/img/gifts.png')
     }
 
 </script>

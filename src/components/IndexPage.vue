@@ -1,6 +1,6 @@
 <template>
-    <div class="body-wrapper">
-        <div class="container" :style="{ backgroundImage: 'url(' + snowUrl + ')' }">
+    <div class="body-wrapper" :style="{ backgroundImage: 'url(' + snowUrl + ')' }">
+        <div class="container">
 
             <div class="header-wrapper">
 
