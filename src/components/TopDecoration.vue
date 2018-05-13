@@ -12,7 +12,7 @@
 
     @Component
     export default class TopDecoration extends Vue {
-        @Prop() private name: string;
+        @Prop() private name!: string;
         @Provide() url = require('../assets/img/' + this.name)
 
     }

@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "element-ui": "^2.3.7",
+    "leancloud-realtime": "^3.5.7",
+    "leancloud-storage": "^3.6.8",
     "vue": "^2.5.16",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.0.0",
