@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <!--<img src="../assets/img/logo.png">-->
     <Cover/>
   </div>
 </template>
@@ -14,5 +13,5 @@ import Cover from '@/components/Cover.vue'; // @ is an alias to /src
       Cover,
   },
 })
-export default class Home extends Vue {}
+export default class CoverPage extends Vue {}
 </script>

@@ -20,19 +20,19 @@ button {
  * grid
  */
 .body-wrapper {
-  height: 100vh;
-  background-repeat: repeat;
-  background-position: center center;
-  background-size: cover;
-  background-size: 80%;
-  animation: snowing 15s linear infinite; }
+  height: 100vh; }
 
 .container {
   min-height: 80vh; }
 
 .header-wrapper {
   display: inline-block;
-  width: 100%; }
+  width: 100%;
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+  background-size: 70%;
+  animation: snowing 15s linear infinite; }
 
 .greeting-wrapper {
   text-align: center; }
@@ -57,6 +57,32 @@ button {
     letter-spacing: 15px;
     font-weight: 500;
     color: #d97a7c; }
+  .greeting-wrapper .open-button {
+    -webkit-transition: all, 0.5s;
+    -moz-transition: all, 0.5s;
+    -ms-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 3px 30px;
+    border: solid 2px #d97a7c;
+    border-radius: 100px;
+    background: none;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    color: #d97a7c;
+    cursor: pointer; }
+    .greeting-wrapper .open-button:hover {
+      -webkit-transition: all, 0.5s;
+      -moz-transition: all, 0.5s;
+      -ms-transition: all, 0.5s;
+      -o-transition: all, 0.5s;
+      transition: all, 0.5s;
+      color: #f38b8d;
+      border: solid 2px #f38b8d; }
   @media screen and (max-width: 700px) {
     .greeting-wrapper .ribbon-wrapper {
       width: 100%;
@@ -79,7 +105,12 @@ button {
       font-size: 18px;
       letter-spacing: 8px;
       font-weight: 500;
-      color: #d97a7c; } }
+      color: #d97a7c; }
+    .greeting-wrapper .open-button {
+      padding: 3px 20px;
+      font-size: 18px;
+      letter-spacing: 3px;
+      text-indent: 3px; } }
 
 #bg-circle {
   animation: fall-down 3s linear infinite; }
@@ -101,9 +132,9 @@ button {
   100% {
     transform: translate(0px, 100px); } }
 @keyframes snowing {
-  from {
-    background-position: 0% 0%; }
   to {
+    background-position: 0% 0%; }
+  from {
     background-position: 0% 100%; } }
 
 /*# sourceMappingURL=Cover.css.map */

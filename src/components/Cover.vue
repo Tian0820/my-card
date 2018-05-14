@@ -1,8 +1,8 @@
 <template>
-    <div class="body-wrapper" :style="{ backgroundImage: 'url(' + snowUrl + ')' }">
+    <div class="body-wrapper">
         <div class="container">
 
-            <div class="header-wrapper">
+            <div class="header-wrapper" :style="{ backgroundImage: 'url(' + snowUrl + ')' }">
 
                 <top-decoration v-for="item in imgPaths" :name="item"/>
 
@@ -14,6 +14,9 @@
                     <span>Birthday</span>
                 </div>
                 <p>Happy 20th!</p>
+
+                <button class="open-button" @click="goToInnerPage">open</button>
+
             </div>
 
         </div>
@@ -24,7 +27,7 @@
 </template>
 
 <script lang="ts">
-    import {Component, Prop, Vue, Provide} from 'vue-property-decorator';
+    import {Component, Prop, Vue, Provide, Emit} from 'vue-property-decorator';
     import TopDecoration from '@/components/TopDecoration.vue';
     import MyFooter from '@/components/Footer.vue';
 
@@ -42,6 +45,12 @@
         @Provide() imgPaths: string[] = ["gift4.png", "gift1.png", "gift2.png", "gift3.png", "gift4.png", "gift5.png", "gift2.png"]
         @Provide() ribbonUrl = require('../assets/img/ribbon.png')
         @Provide() snowUrl = require('../assets/img/snow.png')
+
+        @Emit()
+        goToInnerPage() {
+            
+        }
+
     }
 </script>
 
