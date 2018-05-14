@@ -1,17 +1,17 @@
 <template>
   <div class="home">
     <!--<img src="../assets/img/logo.png">-->
-    <IndexPage/>
+    <Cover/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import IndexPage from '@/components/IndexPage.vue'; // @ is an alias to /src
+import Cover from '@/components/Cover.vue'; // @ is an alias to /src
 
 @Component({
   components: {
-      IndexPage,
+      Cover,
   },
 })
 export default class Home extends Vue {}
