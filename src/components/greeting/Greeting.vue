@@ -7,7 +7,7 @@
                     <div class="blank-wrapper"></div>
                     <button class="accept-button" @click="goToEndPage">accept</button>
                 </div>
-                <img src="../assets/img/cake.png"/>
+                <img src="../../assets/img/cake.png"/>
 
             </div>
 
@@ -18,7 +18,7 @@
 
 <script lang="ts">
     import {Component, Prop, Vue, Provide, Emit} from 'vue-property-decorator';
-    import {router} from '../main';
+    import {router} from '../../main';
 
 
     @Component({
@@ -27,8 +27,8 @@
 
     export default class Greeting extends Vue {
 
-        @Provide() bgUrl = require('../assets/img/flower.png')
-        @Provide() invitationUrl = require('../assets/img/dialogue-box.png')
+        @Provide() bgUrl = require('../../assets/img/flower.png')
+        @Provide() invitationUrl = require('../../assets/img/dialogue-box.png')
 
         @Emit()
         goToEndPage() {

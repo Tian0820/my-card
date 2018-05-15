@@ -28,9 +28,9 @@
 
 <script lang="ts">
     import {Component, Prop, Vue, Provide, Emit} from 'vue-property-decorator';
-    import {router} from '../main';
-    import TopDecoration from '@/components/TopDecoration.vue';
-    import MyFooter from '@/components/Footer.vue';
+    import {router} from '../../main';
+    import TopDecoration from '@/components/layout/TopDecoration.vue';
+    import MyFooter from '@/components/layout/Footer.vue';
 
 
     @Component({
@@ -44,8 +44,8 @@
 //        @Prop() private msg: string;
 
         @Provide() imgPaths: string[] = ["gift4.png", "gift1.png", "gift2.png", "gift3.png", "gift4.png", "gift5.png", "gift2.png"]
-        @Provide() ribbonUrl = require('../assets/img/ribbon.png')
-        @Provide() snowUrl = require('../assets/img/snow.png')
+        @Provide() ribbonUrl = require('../../assets/img/ribbon.png')
+        @Provide() snowUrl = require('../../assets/img/snow.png')
 
         @Emit()
         goToGreetingPage() {

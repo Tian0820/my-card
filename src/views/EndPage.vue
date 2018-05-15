@@ -6,7 +6,7 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-    import End from '@/components/End.vue'; // @ is an alias to /src
+    import End from '@/components/end/End.vue'; // @ is an alias to /src
 
     @Component({
         components: {

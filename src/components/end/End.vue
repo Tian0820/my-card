@@ -7,7 +7,7 @@
                 <p>You!</p>
             </div>
 
-            <img src="../assets/img/balloons2.png" draggable="false"/>
+            <img src="../../assets/img/balloons2.png" draggable="false"/>
 
         </div>
 
@@ -20,7 +20,7 @@
 
 <script lang="ts">
     import {Component, Prop, Vue, Provide, Emit} from 'vue-property-decorator';
-    import {router} from '../main';
+    import {router} from '../../main';
 
 
     @Component({
@@ -30,9 +30,9 @@
 
     export default class End extends Vue {
 
-        @Provide() bgUrl = require('../assets/img/dots.png')
-        @Provide() powUrl = require('../assets/img/pow.png')
-        @Provide() invitationUrl = require('../assets/img/dialogue-box.png')
+        @Provide() bgUrl = require('../../assets/img/dots.png')
+        @Provide() powUrl = require('../../assets/img/pow.png')
+        @Provide() invitationUrl = require('../../assets/img/dialogue-box.png')
 
     }
 </script>
