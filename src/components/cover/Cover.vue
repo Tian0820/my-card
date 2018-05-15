@@ -1,28 +1,31 @@
 <template>
-    <div class="body-wrapper">
-        <div class="container">
+    <div>
+        <div class="body-wrapper">
 
-            <div class="header-wrapper" :style="{ backgroundImage: 'url(' + snowUrl + ')' }">
+            <div class="container">
 
-                <top-decoration v-for="item in imgPaths" :name="item"/>
+                <div class="header-wrapper" :style="{ backgroundImage: 'url(' + snowUrl + ')' }">
 
-            </div>
+                    <top-decoration v-for="item in imgPaths" :name="item"/>
 
-            <div class="greeting-wrapper">
-                <div class="ribbon-wrapper"
-                     :style="{ backgroundImage: 'url(' + ribbonUrl + ')' }">
-                    <span>Birthday</span>
                 </div>
-                <p>Happy 20th!</p>
 
-                <button class="open-button" @click="goToGreetingPage">open</button>
+                <div class="greeting-wrapper">
+                    <div class="ribbon-wrapper"
+                         :style="{ backgroundImage: 'url(' + ribbonUrl + ')' }">
+                        <span>Birthday</span>
+                    </div>
+                    <p>Happy 20th!</p>
+
+                    <button class="open-button" @click="goToGreetingPage">open</button>
+
+                </div>
 
             </div>
+
+            <my-footer></my-footer>
 
         </div>
-
-        <my-footer></my-footer>
-
     </div>
 </template>
 
@@ -32,11 +35,10 @@
     import TopDecoration from '@/components/layout/TopDecoration.vue';
     import MyFooter from '@/components/layout/Footer.vue';
 
-
     @Component({
         components: {
             TopDecoration,
-            MyFooter
+            MyFooter,
         },
     })
 
@@ -49,7 +51,8 @@
 
         @Emit()
         goToGreetingPage() {
-            router.push({name: 'GreetingPage'})
+            this.$modal.show('hello-world');
+//            router.push({name: 'GreetingPage'})
         }
 
     }
