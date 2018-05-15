@@ -20,7 +20,7 @@
 
 <script lang="ts">
     import {Component, Prop, Vue, Provide, Emit} from 'vue-property-decorator';
-    import {router} from '../main.ts';
+    import {router} from '../main';
 
 
     @Component({

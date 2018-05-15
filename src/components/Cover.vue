@@ -28,7 +28,7 @@
 
 <script lang="ts">
     import {Component, Prop, Vue, Provide, Emit} from 'vue-property-decorator';
-    import {router} from '../main.ts';
+    import {router} from '../main';
     import TopDecoration from '@/components/TopDecoration.vue';
     import MyFooter from '@/components/Footer.vue';
 
