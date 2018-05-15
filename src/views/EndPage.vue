@@ -1,18 +1,18 @@
 <template>
     <div class="home">
-        <Greeting/>
+        <End/>
     </div>
 </template>
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-    import Greeting from '@/components/Greeting.vue'; // @ is an alias to /src
+    import End from '@/components/End.vue'; // @ is an alias to /src
 
     @Component({
         components: {
-            Greeting,
+            End,
         },
     })
-    export default class GreetingPage extends Vue {
+    export default class EndPage extends Vue {
     }
 </script>

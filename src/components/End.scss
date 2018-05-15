@@ -1,0 +1,81 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/base";
+@import "../assets/scss/mixin";
+
+.body-wrapper {
+  height: 100vh;
+  background: {
+    repeat: repeat;
+    position: center center;
+    size: cover;
+  }
+  background-size: 50%;
+
+  .container {
+    padding: 10%;
+    width: 100%;
+    min-height: 60vh;
+    text-align: left;
+    //background-color: $light-pink;
+
+    .card-wrapper {
+      display: inline-block;
+      padding: 5%;
+      height: 30%;
+      width: 30%;
+      vertical-align: top;
+      background-color: $pink-color;
+      border-radius: 20px;
+
+      p {
+        color: $white-color;
+        font-size: 36px;
+        font-weight: 500;
+      }
+    }
+
+    img {
+      vertical-align: top;
+      width: 20%;
+      margin-left: -10%;
+      margin-top: -5%;
+      transform: rotate(25deg);
+      -webkit-transform: rotate(25deg);
+    }
+  }
+
+  .pow-wrapper {
+    @include cover-img();
+    height: 34vh;
+    background-size: 100% 100%;
+  }
+
+  @media screen and (max-width: 700px) {
+    .container {
+      padding: 20%;
+
+      .card-wrapper {
+        padding: 10%;
+        height: 20vh;
+        width: 50%;
+
+        p {
+          font-size: 28px;
+        }
+      }
+
+      img {
+        width: 35%;
+        margin-left: -15%;
+        margin-top: -10%;
+      }
+    }
+
+    .pow-wrapper {
+      @include cover-img();
+      height: 20vh;
+      background-size: 100% 100%;
+    }
+
+  }
+}

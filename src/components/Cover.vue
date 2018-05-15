@@ -15,7 +15,7 @@
                 </div>
                 <p>Happy 20th!</p>
 
-                <button class="open-button" @click="goToInnerPage">open</button>
+                <button class="open-button" @click="goToGreetingPage">open</button>
 
             </div>
 
@@ -28,6 +28,7 @@
 
 <script lang="ts">
     import {Component, Prop, Vue, Provide, Emit} from 'vue-property-decorator';
+    import {router} from '../main.ts';
     import TopDecoration from '@/components/TopDecoration.vue';
     import MyFooter from '@/components/Footer.vue';
 
@@ -47,8 +48,8 @@
         @Provide() snowUrl = require('../assets/img/snow.png')
 
         @Emit()
-        goToInnerPage() {
-            
+        goToGreetingPage() {
+            router.push({name: 'GreetingPage'})
         }
 
     }
