@@ -1,7 +1,25 @@
 <template>
 
-    <modal name="hello-world">
-        hello, world!
+    <modal name="info-modal"
+           width="50%"
+           height="auto">
+        <div class="info-wrapper">
+            <div class="input-wrapper">
+                <p>Who are you?</p>
+                <!--<input class="info-input" type="text" v-model="name"/>-->
+
+                <select v-model="name">
+                    <option value="吴彦祖">吴彦祖</option>
+                    <option value="刘昊然">刘昊然</option>
+                    <option value="吴磊">吴磊</option>
+                </select>
+            </div>
+            <div class="button-wrapper">
+                <button class="cancel-button" @click="handleClose">Cancel</button>
+                <button class="confirm-button">Confirm</button>
+            </div>
+
+        </div>
     </modal>
 
 </template>
@@ -18,6 +36,12 @@
 
         @Provide() bgUrl = require('../../assets/img/flower.png')
         @Provide() invitationUrl = require('../../assets/img/dialogue-box.png')
+        @Provide() name = "刘昊然"
+
+        @Emit()
+        handleClose() {
+            this.$modal.hide('info-modal');
+        }
 
     }
 </script>

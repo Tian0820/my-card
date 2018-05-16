@@ -51,7 +51,7 @@
 
         @Emit()
         goToGreetingPage() {
-            this.$modal.show('hello-world');
+            this.$modal.show('info-modal');
 //            router.push({name: 'GreetingPage'})
         }
 
