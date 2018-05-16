@@ -16,7 +16,7 @@
             </div>
             <div class="button-wrapper">
                 <button class="cancel-button" @click="handleClose">Cancel</button>
-                <button class="confirm-button">Confirm</button>
+                <button class="confirm-button" @click="handleConfirm">Confirm</button>
             </div>
 
         </div>
@@ -26,7 +26,14 @@
 
 <script lang="ts">
     import {Component, Prop, Vue, Provide, Emit} from 'vue-property-decorator';
-
+    import {
+        State,
+        Getter,
+        Action,
+        Mutation,
+        namespace
+    } from 'vuex-class'
+    import {mapState, mapMutations, mapActions} from 'vuex'
 
     @Component({
         components: {},
@@ -38,9 +45,16 @@
         @Provide() invitationUrl = require('../../assets/img/dialogue-box.png')
         @Provide() name = "刘昊然"
 
+        @State('auth') auth
+
         @Emit()
         handleClose() {
             this.$modal.hide('info-modal');
+        }
+
+        @Emit()
+        handleConfirm() {
+
         }
 
     }
