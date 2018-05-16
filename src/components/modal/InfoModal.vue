@@ -5,7 +5,7 @@
            height="auto">
         <div class="info-wrapper">
             <div class="input-wrapper">
-                <p>Who are you?</p>
+                <p>Who are you? {{auth.currentName}}</p>
                 <!--<input class="info-input" type="text" v-model="name"/>-->
 
                 <select v-model="name">
@@ -46,6 +46,7 @@
         @Provide() name = "刘昊然"
 
         @State('auth') auth
+        @Action('auth/fetchInfo') fetchInfo
 
         @Emit()
         handleClose() {
@@ -54,7 +55,16 @@
 
         @Emit()
         handleConfirm() {
+            this.fetchInfo({
+                    name: this.name,
+                    onSuccess: () => {
 
+                    },
+                    onError: () => {
+
+                    }
+                },
+            )
         }
 
     }
