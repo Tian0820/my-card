@@ -68,7 +68,15 @@ module.exports = {
         https: false,
         hotOnly: false,
         // See https://github.com/vuejs/vue-cli/blob/dev/docs/cli-service.md#configuring-proxy
-        proxy: null, // string | Object
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3000',
+                changeOrigin: true,
+                // pathRewrite: {
+                //   '^/api': '/'
+                // }
+            }
+        }, // string | Object
         before: app => {
         }
     },

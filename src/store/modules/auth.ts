@@ -9,9 +9,9 @@ const actions = {
 
     fetchInfo({commit}, {name, onSuccess, onError}) {
         commit('saveCurrentName', name)
-        // authApi.fetchInfo((data => {
-        //
-        // }), name)
+        authApi.fetchInfo((data => {
+
+        }), name)
     },
 };
 
