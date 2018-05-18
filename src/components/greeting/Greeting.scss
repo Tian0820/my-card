@@ -5,111 +5,118 @@
 .body-wrapper {
   padding: 10%;
   height: 100vh;
-  background: {
-    repeat: repeat;
-    position: center center;
-    size: cover;
+  background-color: $background-color;
+  text-align: left;
+  //background: {
+  //  repeat: repeat;
+  //  position: center center;
+  //  size: cover;
+  //}
+  //background-size: 50%;
+  .title {
+    margin-bottom: -12px;
+    font-size: 30px;
+    font-weight: 500;
+    color: $light-pink;
   }
-  background-size: 50%;
 
   .container {
+    @include cover-img();
     width: 100%;
     height: 100%;
     background-color: $white-color;
     border: solid 5px $light-pink;
     text-align: center;
 
-    .invitation-wrapper {
-      margin: 0 auto;
-      width: 50%;
-      height: 70%;
-      background: none;
+    .invitation-img {
+      @include cover-img();
+      margin-top: 10%;
+      background-size: 90%;
 
-      .invitation-img {
-        @include cover-img();
-        margin-top: 10%;
-        background-size: 90%;
+      .blank-wrapper {
+        height: 64%;
+      }
 
+      .invitation {
+        font-size: 24px;
+        font-weight: 500;
+        color: $white-color;
+      }
+
+      .accept-button {
+        @include transition(all, 0.3s);
+        display: inline-block;
+        padding: 1px 20px;
+        border: solid 2px $white-color;
+        border-radius: 100px;
+        background: none;
+        font-size: 20px;
+        font-weight: 500;
+        color: $white-color;
+        cursor: pointer;
+
+        &:hover {
+          @include transition(all, 0.3s);
+          font-size: 18px;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
         .blank-wrapper {
-          height: 64%;
+          height: 58%;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        .blank-wrapper {
+          height: 57%;
         }
 
         .accept-button {
-          @include transition(all, 0.3s);
-          display: inline-block;
-          padding: 1px 20px;
-          border: solid 2px $white-color;
-          border-radius: 100px;
-          background: none;
-          font-size: 20px;
-          font-weight: 500;
-          color: $white-color;
-          cursor: pointer;
+          padding: 1px 12px;
+          border: solid 1px $white-color;
+          font-size: 16px;
 
           &:hover {
-            @include transition(all, 0.3s);
-            font-size: 18px;
-          }
-        }
-
-        @media screen and (max-width: 1000px) {
-          .blank-wrapper {
-            height: 58%;
-          }
-        }
-
-        @media screen and (max-width: 900px) {
-          .blank-wrapper {
-            height: 57%;
-          }
-
-          .accept-button {
-            padding: 1px 12px;
-            border: solid 1px $white-color;
-            font-size: 16px;
-
-            &:hover {
-              font-size: 14px;
-            }
-          }
-        }
-
-        @media screen and (max-width: 500px) {
-          .blank-wrapper {
-            height: 55%;
-          }
-
-          .accept-button {
-            padding: 1px 12px;
-            border: solid 1px $white-color;
-            font-size: 13px;
-
-            &:hover {
-              font-size: 12px;
-            }
+            font-size: 14px;
           }
         }
       }
 
-      img {
-        margin-top: -6%;
-        height: 30%;
+      @media screen and (max-width: 500px) {
+        .blank-wrapper {
+          height: 55%;
+        }
+
+        .accept-button {
+          padding: 1px 12px;
+          border: solid 1px $white-color;
+          font-size: 13px;
+
+          &:hover {
+            font-size: 12px;
+          }
+        }
       }
+    }
+
+    img {
+      margin-top: -6%;
+      height: 30%;
     }
 
     @media screen and (max-width: 700px) {
-      .invitation-wrapper {
-        width: 70%;
-        .invitation-img {
-          @include cover-img();
-          margin-top: 0;
-          background-size: 90%;
-        }
-        img {
-          margin-top: -30%;
-          height: 20%;
-        }
+
+      .invitation-img {
+        @include cover-img();
+        margin-top: 0;
+        background-size: 90%;
+      }
+      img {
+        margin-top: -30%;
+        height: 20%;
       }
     }
+
   }
 }

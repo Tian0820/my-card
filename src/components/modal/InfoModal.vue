@@ -5,7 +5,7 @@
            height="auto">
         <div class="info-wrapper">
             <div class="input-wrapper">
-                <p>Who are you? {{auth.currentName}}</p>
+                <p>Who are you? {{auth.currentInfo}}</p>
                 <!--<input class="info-input" type="text" v-model="name"/>-->
 
                 <select v-model="name">
@@ -33,7 +33,7 @@
         Mutation,
         namespace
     } from 'vuex-class'
-    import {mapState, mapMutations, mapActions} from 'vuex'
+    import {router} from '../../main';
 
     @Component({
         components: {},
@@ -55,16 +55,9 @@
 
         @Emit()
         handleConfirm() {
-            this.fetchInfo({
-                    name: this.name,
-                    onSuccess: () => {
-
-                    },
-                    onError: () => {
-
-                    }
-                },
-            )
+            this.fetchInfo(this.name)
+            this.handleClose()
+            router.push({name: 'GreetingPage'})
         }
 
     }

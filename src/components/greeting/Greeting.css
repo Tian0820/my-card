@@ -22,90 +22,95 @@ button {
 .body-wrapper {
   padding: 10%;
   height: 100vh;
-  background-repeat: repeat;
-  background-position: center center;
-  background-size: cover;
-  background-size: 50%; }
+  background-color: #f6f6f6;
+  text-align: left; }
+  .body-wrapper .title {
+    margin-bottom: -12px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #f6c6c8; }
   .body-wrapper .container {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     width: 100%;
     height: 100%;
     background-color: #ffffff;
     border: solid 5px #f6c6c8;
     text-align: center; }
-    .body-wrapper .container .invitation-wrapper {
-      margin: 0 auto;
-      width: 50%;
-      height: 70%;
-      background: none; }
-      .body-wrapper .container .invitation-wrapper .invitation-img {
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        margin-top: 10%;
-        background-size: 90%; }
-        .body-wrapper .container .invitation-wrapper .invitation-img .blank-wrapper {
-          height: 64%; }
-        .body-wrapper .container .invitation-wrapper .invitation-img .accept-button {
+    .body-wrapper .container .invitation-img {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin-top: 10%;
+      background-size: 90%; }
+      .body-wrapper .container .invitation-img .blank-wrapper {
+        height: 64%; }
+      .body-wrapper .container .invitation-img .invitation {
+        font-size: 24px;
+        font-weight: 500;
+        color: #ffffff; }
+      .body-wrapper .container .invitation-img .accept-button {
+        -webkit-transition: all, 0.3s;
+        -moz-transition: all, 0.3s;
+        -ms-transition: all, 0.3s;
+        -o-transition: all, 0.3s;
+        transition: all, 0.3s;
+        display: inline-block;
+        padding: 1px 20px;
+        border: solid 2px #ffffff;
+        border-radius: 100px;
+        background: none;
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+        cursor: pointer; }
+        .body-wrapper .container .invitation-img .accept-button:hover {
           -webkit-transition: all, 0.3s;
           -moz-transition: all, 0.3s;
           -ms-transition: all, 0.3s;
           -o-transition: all, 0.3s;
           transition: all, 0.3s;
-          display: inline-block;
-          padding: 1px 20px;
-          border: solid 2px #ffffff;
-          border-radius: 100px;
-          background: none;
-          font-size: 20px;
-          font-weight: 500;
-          color: #ffffff;
-          cursor: pointer; }
-          .body-wrapper .container .invitation-wrapper .invitation-img .accept-button:hover {
-            -webkit-transition: all, 0.3s;
-            -moz-transition: all, 0.3s;
-            -ms-transition: all, 0.3s;
-            -o-transition: all, 0.3s;
-            transition: all, 0.3s;
-            font-size: 18px; }
-        @media screen and (max-width: 1000px) {
-          .body-wrapper .container .invitation-wrapper .invitation-img .blank-wrapper {
-            height: 58%; } }
-        @media screen and (max-width: 900px) {
-          .body-wrapper .container .invitation-wrapper .invitation-img .blank-wrapper {
-            height: 57%; }
-          .body-wrapper .container .invitation-wrapper .invitation-img .accept-button {
-            padding: 1px 12px;
-            border: solid 1px #ffffff;
-            font-size: 16px; }
-            .body-wrapper .container .invitation-wrapper .invitation-img .accept-button:hover {
-              font-size: 14px; } }
-        @media screen and (max-width: 500px) {
-          .body-wrapper .container .invitation-wrapper .invitation-img .blank-wrapper {
-            height: 55%; }
-          .body-wrapper .container .invitation-wrapper .invitation-img .accept-button {
-            padding: 1px 12px;
-            border: solid 1px #ffffff;
-            font-size: 13px; }
-            .body-wrapper .container .invitation-wrapper .invitation-img .accept-button:hover {
-              font-size: 12px; } }
-      .body-wrapper .container .invitation-wrapper img {
-        margin-top: -6%;
-        height: 30%; }
+          font-size: 18px; }
+      @media screen and (max-width: 1000px) {
+        .body-wrapper .container .invitation-img .blank-wrapper {
+          height: 58%; } }
+      @media screen and (max-width: 900px) {
+        .body-wrapper .container .invitation-img .blank-wrapper {
+          height: 57%; }
+        .body-wrapper .container .invitation-img .accept-button {
+          padding: 1px 12px;
+          border: solid 1px #ffffff;
+          font-size: 16px; }
+          .body-wrapper .container .invitation-img .accept-button:hover {
+            font-size: 14px; } }
+      @media screen and (max-width: 500px) {
+        .body-wrapper .container .invitation-img .blank-wrapper {
+          height: 55%; }
+        .body-wrapper .container .invitation-img .accept-button {
+          padding: 1px 12px;
+          border: solid 1px #ffffff;
+          font-size: 13px; }
+          .body-wrapper .container .invitation-img .accept-button:hover {
+            font-size: 12px; } }
+    .body-wrapper .container img {
+      margin-top: -6%;
+      height: 30%; }
     @media screen and (max-width: 700px) {
-      .body-wrapper .container .invitation-wrapper {
-        width: 70%; }
-        .body-wrapper .container .invitation-wrapper .invitation-img {
-          width: 100%;
-          height: 100%;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: cover;
-          margin-top: 0;
-          background-size: 90%; }
-        .body-wrapper .container .invitation-wrapper img {
-          margin-top: -30%;
-          height: 20%; } }
+      .body-wrapper .container .invitation-img {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin-top: 0;
+        background-size: 90%; }
+      .body-wrapper .container img {
+        margin-top: -30%;
+        height: 20%; } }
 
 /*# sourceMappingURL=Greeting.css.map */

@@ -1,15 +1,16 @@
 <template>
-    <div class="body-wrapper" :style="{ backgroundImage: 'url(' + bgUrl + ')' }">
-        <div class="container">
+    <div class="body-wrapper">
 
-            <div class="invitation-wrapper">
-                <div class="invitation-img" :style="{ backgroundImage: 'url(' + invitationUrl + ')' }">
-                    <div class="blank-wrapper"></div>
-                    <button class="accept-button" @click="goToEndPage">accept</button>
-                </div>
-                <img src="../../assets/img/cake.png"/>
+        <p class="title">PARTY TIME</p>
+        <div class="container" :style="{ backgroundImage: 'url(' + themeUrl + ')' }">
 
+            <div class="invitation-img">
+                <div class="blank-wrapper"></div>
+                <p class="invitation">Mr.Liu 8 p.m. ShangHai</p>
+                <button class="accept-button" @click="goToEndPage">accept</button>
             </div>
+            <!--<img src="../../assets/img/cake.png"/>-->
+
 
         </div>
 
@@ -29,6 +30,7 @@
 
         @Provide() bgUrl = require('../../assets/img/flower.png')
         @Provide() invitationUrl = require('../../assets/img/dialogue-box.png')
+        @Provide() themeUrl = require('../../assets/img/lhr.gif')
 
         @Emit()
         goToEndPage() {
