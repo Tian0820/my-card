@@ -46,7 +46,7 @@ button {
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
-      margin-top: 10%;
+      margin-top: 5%;
       background-size: 90%; }
       .body-wrapper .container .invitation-img .blank-wrapper {
         height: 64%; }
@@ -78,25 +78,21 @@ button {
           font-size: 18px; }
       @media screen and (max-width: 1000px) {
         .body-wrapper .container .invitation-img .blank-wrapper {
-          height: 58%; } }
+          height: 64%; } }
       @media screen and (max-width: 900px) {
         .body-wrapper .container .invitation-img .blank-wrapper {
-          height: 57%; }
+          height: 70%; }
         .body-wrapper .container .invitation-img .accept-button {
           padding: 1px 12px;
           border: solid 1px #ffffff;
-          font-size: 16px; }
-          .body-wrapper .container .invitation-img .accept-button:hover {
-            font-size: 14px; } }
+          font-size: 16px; } }
       @media screen and (max-width: 500px) {
         .body-wrapper .container .invitation-img .blank-wrapper {
-          height: 55%; }
+          height: 70%; }
         .body-wrapper .container .invitation-img .accept-button {
           padding: 1px 12px;
           border: solid 1px #ffffff;
-          font-size: 13px; }
-          .body-wrapper .container .invitation-img .accept-button:hover {
-            font-size: 12px; } }
+          font-size: 16px; } }
     .body-wrapper .container img {
       margin-top: -6%;
       height: 30%; }

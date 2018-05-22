@@ -30,7 +30,7 @@
 
     .invitation-img {
       @include cover-img();
-      margin-top: 10%;
+      margin-top: 5%;
       background-size: 90%;
 
       .blank-wrapper {
@@ -63,39 +63,31 @@
 
       @media screen and (max-width: 1000px) {
         .blank-wrapper {
-          height: 58%;
+          height: 64%;
         }
       }
 
       @media screen and (max-width: 900px) {
         .blank-wrapper {
-          height: 57%;
+          height: 70%;
         }
 
         .accept-button {
           padding: 1px 12px;
           border: solid 1px $white-color;
           font-size: 16px;
-
-          &:hover {
-            font-size: 14px;
-          }
         }
       }
 
       @media screen and (max-width: 500px) {
         .blank-wrapper {
-          height: 55%;
+          height: 70%;
         }
 
         .accept-button {
           padding: 1px 12px;
           border: solid 1px $white-color;
-          font-size: 13px;
-
-          &:hover {
-            font-size: 12px;
-          }
+          font-size: 16px;
         }
       }
     }
