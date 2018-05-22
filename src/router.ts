@@ -16,7 +16,7 @@ export default new Router({
             component: CoverPage
         },
         {
-            path: '/greeting',
+            path: '/greeting/:name',
             name: 'GreetingPage',
             component: GreetingPage
         },

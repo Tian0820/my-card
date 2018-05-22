@@ -6,7 +6,7 @@
 
             <div class="invitation-img">
                 <div class="blank-wrapper"></div>
-                <p class="invitation">Mr.Liu 8 p.m. ShangHai</p>
+                <p class="invitation">Mr.{{this.currentInfo.lastName}} 8 p.m. ShangHai</p>
                 <button class="accept-button" @click="goToEndPage">accept</button>
             </div>
             <!--<img src="../../assets/img/cake.png"/>-->
@@ -20,7 +20,13 @@
 <script lang="ts">
     import {Component, Prop, Vue, Provide, Emit} from 'vue-property-decorator';
     import {router} from '../../main';
-
+    import {
+        State,
+        Getter,
+        Action,
+        Mutation,
+        namespace
+    } from 'vuex-class'
 
     @Component({
         components: {},
@@ -28,9 +34,10 @@
 
     export default class Greeting extends Vue {
 
+        @Prop() currentInfo
         @Provide() bgUrl = require('../../assets/img/flower.png')
         @Provide() invitationUrl = require('../../assets/img/dialogue-box.png')
-        @Provide() themeUrl = require('../../assets/img/lhr.gif')
+        @Provide() themeUrl = require('../../assets/img/' + this.currentInfo.info + '.gif')
 
         @Emit()
         goToEndPage() {

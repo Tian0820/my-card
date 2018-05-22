@@ -5,7 +5,7 @@
            height="auto">
         <div class="info-wrapper">
             <div class="input-wrapper">
-                <p>Who are you? {{auth.currentInfo}}</p>
+                <p>Who are you?</p>
                 <!--<input class="info-input" type="text" v-model="name"/>-->
 
                 <select v-model="name">
@@ -57,7 +57,7 @@
         handleConfirm() {
             this.fetchInfo(this.name)
             this.handleClose()
-            router.push({name: 'GreetingPage'})
+            router.push({name: 'GreetingPage', params: {name: this.name}})
         }
 
     }

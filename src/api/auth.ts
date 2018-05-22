@@ -1,11 +1,11 @@
 import axios from 'axios'
 
 export function fetchInfo(callback, name) {
-    axios.post('/user/get',
-        {name: name},
-        {
-            headers: {'Content-Type': 'application/json'}
-        })
+    axios.get('/user/get', {
+        params: {
+            name: name
+        }
+    })
         .then(function (response) {
             console.log('success!!', response.data)
             callback(response.data)

@@ -1,20 +1,20 @@
 import * as authApi from '../../api/auth'
 
 const state = {
-    currentName: '',
-    currentInfo: ''
+    currentName: null,
+    currentInfo: null
 }
 
 // actions 可异步
 const actions = {
 
     fetchInfo({commit}, name) {
+        commit('saveCurrentInfo', null)
         commit('saveCurrentName', name)
         authApi.fetchInfo((data => {
-            if (data.message === 'success') {
-                commit('saveCurrentInfo', data.info)
+            if (data !== null) {
+                commit('saveCurrentInfo', data)
             }
-
         }), name)
     },
 };
