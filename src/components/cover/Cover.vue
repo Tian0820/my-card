@@ -8,6 +8,8 @@
 
                     <top-decoration v-for="item in imgPaths" :name="item"/>
 
+                    <button class="management-button" @click="goToManagePage">好友管理</button>
+
                 </div>
 
                 <div class="greeting-wrapper">
@@ -53,6 +55,11 @@
         goToGreetingPage() {
             this.$modal.show('info-modal');
 //            router.push({name: 'GreetingPage'})
+        }
+
+        @Emit()
+        goToManagePage() {
+            router.push({name: 'ManagePage'})
         }
 
     }

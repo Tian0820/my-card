@@ -33,6 +33,15 @@ button {
   background-size: cover;
   background-size: 70%;
   animation: snowing 15s linear infinite; }
+  .header-wrapper .management-button {
+    float: right;
+    padding: 5px 10px;
+    background: none;
+    color: #d97a7c;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer; }
 
 .greeting-wrapper {
   text-align: center; }

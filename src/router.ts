@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import CoverPage from './views/CoverPage.vue'
 import GreetingPage from './views/GreetingPage.vue'
 import EndPage from './views/EndPage.vue'
+import ManagePage from './views/ManagePage.vue'
 import About from './views/About.vue'
 
 
@@ -24,6 +25,11 @@ export default new Router({
             path: '/end',
             name: 'EndPage',
             component: EndPage
+        },
+        {
+            path: '/manage',
+            name: 'ManagePage',
+            component: ManagePage
         },
         {
             path: '/about',

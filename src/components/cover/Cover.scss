@@ -20,6 +20,17 @@
   }
   background-size: 70%;
   animation: snowing 15s linear infinite;
+
+  .management-button {
+    float: right;
+    padding: 5px 10px;
+    background: none;
+    color: $pink-color;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer ;
+  }
 }
 
 .greeting-wrapper {
