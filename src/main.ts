@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import VModal from 'vue-js-modal'
 import axios from 'axios'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
 Vue.use(VModal, { dialog: true })
@@ -15,6 +17,7 @@ var { Query, User } = AV;
 var { Realtime, TextMessage } = require('leancloud-realtime');
 
 axios.defaults.baseURL = '/api'
+Vue.use(ElementUI);
 
 new Vue({
   router,

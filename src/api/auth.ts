@@ -7,7 +7,17 @@ export function fetchInfo(callback, name) {
         }
     })
         .then(function (response) {
-            console.log('success!!', response.data)
+            callback(response.data)
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
+}
+
+export function fetchAllFriends(callback) {
+    axios.get('/user/getAll')
+        .then(function (response) {
+            console.log('all friends', response.data)
             callback(response.data)
         })
         .catch(function (error) {

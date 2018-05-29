@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iEAAkE;EAChE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,WAAW,ECSM,sCAAsC;EDRvD,WAAW,ECSM,GAAG;EDRpB,UAAU,EAAE,IAAI;;AAGlB,IAAK;EACH,MAAM,EAAE,IAAI;;AAGd,CAAE;EACA,QAAQ,EAAE,QAAQ;EAClB,UAAU,EAAE,UAAU;;AAIxB,MAAO;EACL,OAAO,EAAE,IAAI;;AE2Df;;GAEG;AC7EH,kBAAmB;EACjB,SAAS,EAAE,CAAC;;AAEd,wBAAyB;EACvB,KAAK,EAAE,IAAI;EACX,KAAK,EAAE,OAAO;;AAEhB,gCAAiC;EAC/B,YAAY,EAAE,CAAC;EACf,aAAa,EAAE,CAAC;EAChB,KAAK,EAAE,GAAG",
+"sources": ["../../assets/scss/_base.scss","../../assets/scss/_variables.scss","../../assets/scss/_mixin.scss","FriendsInfo.scss"],
+"names": [],
+"file": "FriendsInfo.css"
+}

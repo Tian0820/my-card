@@ -2,7 +2,8 @@ import * as authApi from '../../api/auth'
 
 const state = {
     currentName: null,
-    currentInfo: null
+    currentInfo: null,
+    allFriends: null,
 }
 
 // actions 可异步
@@ -17,6 +18,14 @@ const actions = {
             }
         }), name)
     },
+
+    fetchAllFriends({commit}) {
+        authApi.fetchAllFriends((data => {
+            if (data !== null) {
+                commit('saveAllFriends', data)
+            }
+        }))
+    },
 };
 
 // mutations 必须同步
@@ -26,6 +35,9 @@ const mutations = {
     },
     saveCurrentInfo(state, currentInfo) {
         state.currentInfo = currentInfo
+    },
+    saveAllFriends(state, allFriends) {
+        state.allFriends = allFriends
     }
 };
 
