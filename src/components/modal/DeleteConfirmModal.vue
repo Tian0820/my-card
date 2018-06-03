@@ -9,8 +9,8 @@
             </div>
 
             <div class="button-wrapper">
-                <button class="cancel-button" @click="">Cancel</button>
-                <button class="confirm-button" @click="">Confirm</button>
+                <button class="cancel-button" @click="handleClose">Cancel</button>
+                <button class="confirm-button" @click="handleConfirm">Confirm</button>
             </div>
         </div>
     </modal>
@@ -26,12 +26,35 @@
         namespace
     } from 'vuex-class'
     import {router} from '../../main';
+    import {Message} from "element-ui";
 
     @Component({
         components: {},
     })
 
     export default class DeleteConfirmModal extends Vue {
+
+        @Action('auth/deleteFriend') deleteFriend
+        @State('auth') auth
+
+        @Emit()
+        handleClose() {
+            this.$modal.hide('delete-confirm-modal')
+        }
+
+        @Emit()
+        handleConfirm() {
+            this.deleteFriend({
+                name: this.auth.friendToEdit.name,
+                onSuccess: (success) => {
+                    Message.success(success)
+                    this.$modal.hide('delete-confirm-modal')
+                },
+                onError: (error) => {
+                    Message.error(error)
+                }
+            })
+        }
 
     }
 </script>

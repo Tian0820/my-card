@@ -14,3 +14,26 @@
   margin-bottom: 0;
   width: 50%;
 }
+
+/deep/ .el-table td, .el-table th {
+  text-align: left;
+  color: $grey;
+  font-weight: 400;
+}
+
+/deep/ .el-button {
+  padding: 7px 15px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 550px) {
+  .el-button+.el-button {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .el-button+.el-button {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,68 @@
+html, body, h1, h2, h3, h4, h5, h6, hr, li, ul, p, a, img, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  list-style: none; }
+
+html {
+  height: 100%; }
+
+* {
+  position: relative;
+  box-sizing: border-box; }
+
+button {
+  outline: none; }
+
+/*
+ * grid
+ */
+.el-tag {
+  margin-right: 10px; }
+  .el-tag:last-child {
+    margin-right: 0; }
+
+.button-wrapper {
+  margin-top: 20px;
+  text-align: right; }
+  .button-wrapper button {
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    -ms-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+    display: inline-block;
+    padding: 3px 15px;
+    border-radius: 100px;
+    background-color: #d97a7c;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer; }
+    .button-wrapper button:hover {
+      -webkit-transition: all, 0.3s;
+      -moz-transition: all, 0.3s;
+      -ms-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      transition: all, 0.3s;
+      background-color: #f38b8d; }
+  .button-wrapper .cancel-button {
+    margin-right: 5%;
+    background-color: #bababa;
+    color: #ffffff; }
+    .button-wrapper .cancel-button:hover {
+      background-color: #cbcbcb; }
+
+@media screen and (max-width: 600px) {
+  select {
+    width: 80%; }
+
+  .button-wrapper button {
+    padding: 3px 10px;
+    font-size: 12px; } }
+@media screen and (max-width: 450px) {
+  .button-wrapper .cancel-button {
+    display: none; } }
+
+/*# sourceMappingURL=EditForm.css.map */
