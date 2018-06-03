@@ -19,6 +19,9 @@ button {
 /*
  * grid
  */
+form {
+  margin-top: 30px; }
+
 .el-tag {
   margin-right: 10px; }
   .el-tag:last-child {

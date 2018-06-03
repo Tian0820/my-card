@@ -19,6 +19,25 @@ button {
 /*
  * grid
  */
+.body-wrapper {
+  padding: 3%;
+  text-align: left;
+  background-color: #ffffff; }
+  .body-wrapper h1 {
+    margin-bottom: 15px;
+    color: #7b7b7b;
+    font-weight: 400; }
+  .body-wrapper .add-button {
+    float: right;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #d97a7c;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+    cursor: pointer; }
+
 .demo-table-expand {
   font-size: 0; }
 
