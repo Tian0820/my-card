@@ -39,8 +39,25 @@ export function deleteFriend(callback, name) {
 }
 
 export function updateFriend(callback, info) {
-    console.log(name)
     axios.post('/user/update',
+        {
+            name: info.name,
+            sex: info.sex,
+            tags: info.tags.join(';')
+        },
+        {
+            headers: {'Content-Type': 'application/json'}
+        })
+        .then(function (response) {
+            callback(response.data)
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
+}
+
+export function addNewFriend(callback, info) {
+    axios.post('/user/add',
         {
             name: info.name,
             sex: info.sex,

@@ -68,6 +68,14 @@ button {
     .info-wrapper .button-wrapper .cancel-button {
       display: none; } }
 
+form {
+  margin-top: 30px; }
+
+.el-tag {
+  margin-right: 10px; }
+  .el-tag:last-child {
+    margin-right: 0; }
+
 /deep/ .el-input__inner {
   height: 30px;
   border-radius: 100px; }

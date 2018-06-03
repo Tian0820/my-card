@@ -53,6 +53,19 @@ const actions = {
                 onError(data.message)
             }
         }), info)
+    },
+
+    addNewFriend({commit}, {info, onSuccess, onError}) {
+        authApi.addNewFriend((data => {
+            if (data.result === 'success') {
+                if (onSuccess) {
+                    onSuccess(data.message)
+                    commit('saveNewFriend', info)
+                }
+            } else {
+                onError(data.message)
+            }
+        }), info)
     }
 };
 
@@ -91,6 +104,9 @@ const mutations = {
                 friend.tags = updatedFriend.tags.join(' ')
             }
         })
+    },
+    saveNewFriend(state, newFriend) {
+        state.allFriends.push(newFriend)
     }
 };
 
