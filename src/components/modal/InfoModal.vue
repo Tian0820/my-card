@@ -9,9 +9,8 @@
                 <!--<input class="info-input" type="text" v-model="name"/>-->
 
                 <select v-model="name">
-                    <option value="吴彦祖">吴彦祖</option>
-                    <option value="刘昊然">刘昊然</option>
-                    <option value="吴磊">吴磊</option>
+                    <option v-for="friend in auth.allFriends" :key="friend.name" :value="friend.name">{{friend.name}}
+                    </option>
                 </select>
             </div>
             <div class="button-wrapper">

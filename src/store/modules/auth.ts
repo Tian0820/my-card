@@ -106,6 +106,7 @@ const mutations = {
         })
     },
     saveNewFriend(state, newFriend) {
+        newFriend.tags = newFriend.tags.join(' ')
         state.allFriends.push(newFriend)
     }
 };

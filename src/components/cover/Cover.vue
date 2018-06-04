@@ -8,7 +8,7 @@
 
                     <top-decoration v-for="item in imgPaths" :name="item"/>
 
-                    <button class="management-button" @click="goToManagePage">好友管理</button>
+                    <button class="management-button" @click="goToManagePage">Manage Friends</button>
 
                 </div>
 

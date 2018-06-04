@@ -23,12 +23,18 @@ button {
   padding: 10%;
   height: 100vh;
   background-color: #f6f6f6;
-  text-align: left; }
+  text-align: left;
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+  background-size: 50%; }
   .body-wrapper .title {
     margin-bottom: -12px;
     font-size: 30px;
     font-weight: 500;
-    color: #f6c6c8; }
+    color: #d97a7c; }
+  .body-wrapper .welcome-div {
+    top: 50%; }
   .body-wrapper .container {
     width: 100%;
     height: 100%;
@@ -38,7 +44,7 @@ button {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
-    border: solid 5px #f6c6c8;
+    border: solid 4px #d97a7c;
     text-align: center; }
     .body-wrapper .container .invitation-img {
       width: 100%;
@@ -46,14 +52,13 @@ button {
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
-      margin-top: 5%;
       background-size: 90%; }
       .body-wrapper .container .invitation-img .blank-wrapper {
         height: 64%; }
       .body-wrapper .container .invitation-img .invitation {
         font-size: 24px;
         font-weight: 500;
-        color: #ffffff; }
+        color: #d97a7c; }
       .body-wrapper .container .invitation-img .accept-button {
         -webkit-transition: all, 0.3s;
         -moz-transition: all, 0.3s;
@@ -62,12 +67,12 @@ button {
         transition: all, 0.3s;
         display: inline-block;
         padding: 1px 20px;
-        border: solid 2px #ffffff;
+        border: solid 2px #d97a7c;
         border-radius: 100px;
         background: none;
         font-size: 20px;
         font-weight: 500;
-        color: #ffffff;
+        color: #d97a7c;
         cursor: pointer; }
         .body-wrapper .container .invitation-img .accept-button:hover {
           -webkit-transition: all, 0.3s;
@@ -84,14 +89,14 @@ button {
           height: 70%; }
         .body-wrapper .container .invitation-img .accept-button {
           padding: 1px 12px;
-          border: solid 1px #ffffff;
+          border: solid 1px #d97a7c;
           font-size: 16px; } }
       @media screen and (max-width: 500px) {
         .body-wrapper .container .invitation-img .blank-wrapper {
           height: 70%; }
         .body-wrapper .container .invitation-img .accept-button {
           padding: 1px 12px;
-          border: solid 1px #ffffff;
+          border: solid 1px #d97a7c;
           font-size: 16px; } }
     .body-wrapper .container img {
       margin-top: -6%;
@@ -103,7 +108,6 @@ button {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        margin-top: 0;
         background-size: 90%; }
       .body-wrapper .container img {
         margin-top: -30%;

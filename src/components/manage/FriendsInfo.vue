@@ -1,6 +1,6 @@
 <template>
     <div class="body-wrapper">
-        <h1>好友管理</h1>
+        <h1>Manage Friends</h1>
         <div class="table-wrapper">
             <el-table
                     :data="tableData"
@@ -8,33 +8,33 @@
                     border
                     style="width: 100%">
                 <el-table-column
-                        label="姓名"
+                        label="Name"
                         prop="name">
                 </el-table-column>
                 <el-table-column
-                        label="性别"
+                        label="Sex"
                         prop="sex">
                 </el-table-column>
                 <el-table-column
-                        label="标签"
+                        label="Tags"
                         prop="tags">
                 </el-table-column>
-                <el-table-column label="操作">
+                <el-table-column label="Operation">
                     <template slot-scope="scope">
                         <el-button
                                 size="mini"
-                                @click="handleEdit(scope.$index, scope.row)">编辑
+                                @click="handleEdit(scope.$index, scope.row)">Edit
                         </el-button>
                         <el-button
                                 size="mini"
                                 type="danger"
-                                @click="handleDelete(scope.$index, scope.row)">删除
+                                @click="handleDelete(scope.$index, scope.row)">Delete
                         </el-button>
                     </template>
                 </el-table-column>
             </el-table>
 
-            <button class="add-button" @click="handleAdd">+ 增加好友</button>
+            <button class="add-button" @click="handleAdd">+ New</button>
         </div>
     </div>
 </template>

@@ -1,16 +1,24 @@
 <template>
-    <div class="body-wrapper">
+    <div class="body-wrapper" :style="{ backgroundImage: 'url(' + bgUrl + ')' }">
 
         <p class="title">PARTY TIME</p>
-        <div class="container" :style="{ backgroundImage: 'url(' + themeUrl + ')' }">
+        <div class="container">
 
             <div class="invitation-img">
-                <div class="blank-wrapper"></div>
-                <p class="invitation">Mr.{{this.currentInfo.lastName}} 8 p.m. ShangHai</p>
-                <button class="accept-button" @click="goToEndPage">accept</button>
-            </div>
-            <!--<img src="../../assets/img/cake.png"/>-->
+                <!--<div class="blank-wrapper"></div>-->
+                <div class="welcome-div">
+                    <p class="invitation">
+                        <span :style="{ fontSize: '48px' }">Welcome</span>
+                        {{this.currentInfo.name}}
+                        <br/>
+                        8 p.m. ShangHai</p>
+                </div>
+                <!--<img src="../../assets/img/cake.png"/>-->
 
+                <div :style="{ top: '53%' }">
+                    <button class="accept-button" @click="goToEndPage">accept</button>
+                </div>
+            </div>
 
         </div>
 
@@ -37,7 +45,8 @@
         @Prop() currentInfo
         @Provide() bgUrl = require('../../assets/img/flower.png')
         @Provide() invitationUrl = require('../../assets/img/dialogue-box.png')
-        @Provide() themeUrl = require('../../assets/img/' + this.currentInfo.info + '.gif')
+
+//        @Provide() themeUrl = require('../../assets/img/' + this.currentInfo.info + '.gif')
 
         @Emit()
         goToEndPage() {
